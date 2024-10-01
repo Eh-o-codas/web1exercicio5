@@ -6,15 +6,17 @@ document.addEventListener('DOMContentLoaded', () => {
   
       const textValue = document.getElementById('text').value;
       const emailValue = document.getElementById('email')?.value;
+      const messageValue = document.getElementById('message')?.value;
   
       const formData = {
         text: textValue,
         email: emailValue,
+        message: messageValue,
       };
   
       console.log('Dados coletados', formData);
   
-      const response = await fetch('https://minhasAPI.com/cadastro', {
+      const response = await fetch('https://contatoAPI.com/contato', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
